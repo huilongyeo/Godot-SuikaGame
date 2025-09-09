@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://bqfhgc7twf3a7"]
+
+[ext_resource type="Script" uid="uid://cgf1tvvqkvwy6" path="res://fruit.gd" id="1_dajs1"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_t45jj"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_dajs1"]
+
+[node name="Fruit" type="RigidBody2D"]
+script = ExtResource("1_dajs1")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_t45jj")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="AreaShape" type="CollisionShape2D" parent="Area2D"]
+shape = SubResource("CircleShape2D_dajs1")

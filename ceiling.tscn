@@ -1,0 +1,29 @@
+[gd_scene load_steps=4 format=3 uid="uid://s5433vnmjqnu"]
+
+[ext_resource type="Script" uid="uid://dyaoyucy5qkpc" path="res://ceiling.gd" id="1_tampc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_tampc"]
+size = Vector2(0, 0)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kth4p"]
+size = Vector2(480, 10)
+
+[node name="Ceiling" type="StaticBody2D"]
+script = ExtResource("1_tampc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-1, -1)
+shape = SubResource("RectangleShape2D_tampc")
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+position = Vector2(240, 100)
+shape = SubResource("RectangleShape2D_kth4p")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+offset_top = 100.0
+offset_right = 480.0
+offset_bottom = 110.0
+mouse_filter = 2
+color = Color(1, 0, 0, 1)
